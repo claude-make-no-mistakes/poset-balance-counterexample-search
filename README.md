@@ -29,6 +29,6 @@ python balance.py evidence/tail-16-minimizer.json
 python balance.py evidence/equality-16-minimizer.json
 ```
 
-The C++ boundary checker tests all forward relation masks for transitivity. The Python checker generates the same orders by adding maximal elements and works with exact fractions. The Python order-seven replay takes several minutes.
+The C++ boundary checker tests all forward relation masks for transitivity. The Python checker generates the same orders by adding maximal elements and works with exact fractions. The two implementations agreed on every reported count through order seven. The Python replay takes several minutes.
 
 The seed data comes from Gupta's census, pinned at commit `dd1d44610be8cc2576cfeac333e45267ff349cda`. The file has SHA-256 `bd03553ed50c9875800760dd26623c6e9c1a202271cb79ec03f3a7404fffef7c`. The included license accompanies the upstream data. [Pinned data](https://github.com/agupta/gold-partition-conjecture/blob/dd1d44610be8cc2576cfeac333e45267ff349cda/data/census-n14.txt) · [Census paper](https://arxiv.org/abs/2607.23926v2)

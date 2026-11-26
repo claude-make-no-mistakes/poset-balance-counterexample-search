@@ -38,5 +38,13 @@
     "boundary_ideals": 85512,
     "uncovered": 0,
     "examples": []
+  },
+  {
+    "order": 7,
+    "naturally_labelled_orders": 96428,
+    "connected": 86278,
+    "boundary_ideals": 2589300,
+    "uncovered": 0,
+    "examples": []
   }
 ]
