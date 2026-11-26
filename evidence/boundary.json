@@ -1,0 +1,42 @@
+[
+  {
+    "order": 2,
+    "naturally_labelled_orders": 2,
+    "connected": 1,
+    "boundary_ideals": 4,
+    "uncovered": 0,
+    "examples": []
+  },
+  {
+    "order": 3,
+    "naturally_labelled_orders": 7,
+    "connected": 4,
+    "boundary_ideals": 26,
+    "uncovered": 0,
+    "examples": []
+  },
+  {
+    "order": 4,
+    "naturally_labelled_orders": 40,
+    "connected": 27,
+    "boundary_ideals": 267,
+    "uncovered": 0,
+    "examples": []
+  },
+  {
+    "order": 5,
+    "naturally_labelled_orders": 357,
+    "connected": 275,
+    "boundary_ideals": 4000,
+    "uncovered": 0,
+    "examples": []
+  },
+  {
+    "order": 6,
+    "naturally_labelled_orders": 4824,
+    "connected": 4070,
+    "boundary_ideals": 85512,
+    "uncovered": 0,
+    "examples": []
+  }
+]

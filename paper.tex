@@ -1,0 +1,173 @@
+\documentclass[10pt]{article}
+\usepackage[top=0.74in,bottom=0.76in,left=0.9in,right=0.9in]{geometry}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage[hidelinks]{hyperref}
+\DeclareFontShape{OMX}{cmex}{m}{n}{<->cmex10}{}
+\DeclareMathSizes{10}{10}{7}{7}
+\DeclareMathSizes{9}{10}{7}{7}
+\newtheorem{theorem}{Theorem}
+\title{Small incomparability components after one deletion}
+\author{Achita Anantachina}
+\date{26 November 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A hypothetical counterexample to the one-third--two-thirds conjecture
+cannot have a small component in the incomparability graph after deleting
+any one point. We give an elementary proof for components of order two and
+three and an exact finite check that treats larger components at arbitrary
+ambient order. We also search for counterexamples by inserting one or two
+points into published low-balance posets.
+\end{abstract}
+
+For a finite poset \(Q\), a balanced pair consists of incomparable
+\(u,v\) for which the probability of \(u\) preceding \(v\) in a uniform
+linear extension lies in \([1/3,2/3]\). The conjecture asks for such a
+pair in every non-chain. See \cite{acpp} for recent general bounds
+and \cite{gupta} for the order-14 census.
+
+\begin{theorem}\label{thm:small}
+Let \(Q\) be a finite non-chain poset and \(x\in Q\). If \(Q-x\) is a chain,
+or if its incomparability graph has a component of order two or three,
+then \(Q\) has a balanced pair.
+\end{theorem}
+
+\begin{proof}
+If \(Q-x\) is a chain, the elements incomparable with \(x\) form a
+nonempty interval. Inserting \(x\) in a gap of that interval gives all
+extensions. A middle element of the interval gives a balanced pair.
+
+Otherwise let \(B\) be a component of order two or three after deletion.
+The components of any incomparability graph form an ordinal sum in the
+poset. Indeed, an outside vertex compares in the same direction to both
+ends of every incomparability edge, by transitivity. This fixes the
+direction between entire components. Every extension is then a
+concatenation of component extensions. We may restrict to the component
+of the incomparability graph of \(Q\) containing \(B\). If it omits \(x\), it
+equals \(B\) because all old incomparability edges are unchanged.
+An antichain of order two or three has a pair with probability \(1/2\).
+The only other connected possibility of order three is \(a<b\) with
+\(c\) incomparable to both, where \(b\) precedes \(c\) with probability
+\(1/3\).
+
+Suppose the component contains \(x\). If there are at least two old
+components in it, an element below \(x\) can only be in the first, and
+an element above \(x\) can only be in the last. For example a predecessor
+of \(x\) in any later component would make every element of the first
+component comparable to \(x\), disconnecting it. The upper statement
+follows by duality. If \(B\) is interior, \(x\) is incomparable to all its
+points. For every fixed choice of the other component extensions,
+the number of admissible gaps for \(x\) does not depend on the order
+within \(B\). Each extension of \(B\) thus has equal weight, giving the
+same balanced pair as in \(B\).
+
+At an end we treat the first component, using duality for the last.
+Here \(x\) has no successor in \(B\). If \(B\) is the only old component
+and all comparisons with \(x\) point one way, choose the dual if needed
+so that \(x\) has no successor in \(B\).
+For each extension of \(B\), let \(\ell\) be the last position of an
+element below \(x\), or zero if there is none. There are \(|B|-\ell\)
+admissible gaps before the end of \(B\). For each fixed extension of the
+rest, the number of gaps at or after the end is independent of the order
+within \(B\) and is at least one. After averaging over the rest, the
+weights of the orders of \(B\) are proportional to \(r+|B|-\ell\) for
+a common \(r\ge1\).
+
+For a two-point antichain the two weights differ by at most one, and
+both are at least one. Their normalized values are in \([1/3,2/3]\).
+For a three-point antichain, two points have the same relation to \(x\).
+They can be swapped by an automorphism, giving probability \(1/2\).
+For \(B=\{a<b,c\}\), use the orders \(abc,acb,cab\). As the ideal of
+predecessors varies through \(\emptyset,\{a\},\{c\},\{a,c\},\{a,b\},B\),
+the three \(\ell\)-values are respectively
+\[
+(0,0,0),\ (1,1,2),\ (3,2,1),\ (3,2,2),\ (2,3,3),\ (3,3,3).
+\]
+Thus \(abc\) or \(cab\) has maximum weight. All three weights are at
+least one and differ by at most two, so the largest normalized weight
+is between \(1/3\) and \(3/5\). The events \(abc\) and \(cab\) are exactly
+\(b\) before \(c\) and \(c\) before \(a\), respectively.
+
+Finally, if \(B\) is the only old component, both a predecessor and
+a successor of \(x\) can occur only in the three-point case with
+\(a<x<b\). Then \(c\) is isolated from the chain, and \(c,x\) is balanced.
+\end{proof}
+
+In particular, all one-point extensions of ordinal sums of singleton
+and three-point equality blocks satisfy the conjecture whenever they
+are non-chains. Theorem~\ref{thm:small} applies even when other old
+components are arbitrary. A counterexample must, after every one-point
+deletion, have at least one incomparability component of order at least
+four and none of order two or three.
+
+\section*{Checking larger components}
+The boundary weights above reduce larger components to a finite problem
+with one real parameter. For an endpoint component \(B\) and its ideal
+\(D\) of predecessors of \(x\), set \(o(\pi)=|B|-\ell(\pi)\) for each
+linear extension \(\pi\) of \(B\). Write \(m\) for the number of
+extensions and \(h=\sum_\pi o(\pi)\). For any incomparable pair \(u,v\)
+write \(c\) for the number of extensions with \(u\) before \(v\) and \(d\)
+for the sum of their offsets. The probability of this event is
+\[
+\frac{rc+d}{rm+h},\qquad r\ge1.
+\]
+The condition of being in \([1/3,2/3]\) gives two affine inequalities
+with integer coefficients. Intersect their closed solution intervals
+with \([1,\infty)\), and take the union over incomparable pairs.
+This gives an exact test for coverage of every admissible parameter.
+For example, with \(a<b<c\), isolated \(d\), and \(D=\{d\}\), the pair
+\(d,a\) is balanced for \(1\le r\le3\), while \(d,b\) is balanced for
+\(r\ge3/2\). Both intervals are needed to cover the whole range.
+
+The enumeration uses natural labellings, in which every relation points
+from a smaller to a larger label. Any poset has one, and a new largest
+label can have any ideal as its strict lower set. We generate all such
+orders up to the tested size, keep those with connected incomparability
+graph, and check every ideal \(D\).
+
+Through order six every interval union covered \([1,\infty)\). This
+extends Theorem~\ref{thm:small} to components of orders four through six.
+For an interior component the empty ideal gives its uniform law. If
+the component is the entire old order after restriction and \(x\) has both
+predecessors and successors, the restricted poset has at most seven
+points and is covered by the order-14 census \cite{gupta}.
+
+\section*{Exact checks near low-balance seeds}
+We use the 42 labelled representatives of the distinct low-tail
+values in Gupta's archive and the 68 stored equality representatives.
+For an inserted vertex its strict lower set is an ideal \(D\), its
+upper set is a filter \(U\), and every point of \(D\) must be strictly
+below every point of \(U\). These conditions are necessary and
+sufficient. Every legal insertion appears once for each labelled seed.
+
+The exact counting algorithm traverses the ideals of the resulting
+poset. If an edge of the ideal graph inserts \(v\) into ideal \(I\), the
+product of the prefix count at \(I\) and suffix count at \(I+v\) is the
+number of extensions using this edge. Add this product to the
+precedence count of \(u,v\) for each \(u\in I\). Every extension is
+counted exactly once for each ordered precedence it contains.
+
+For one insertion we checked 27,371 labelled cases. Among the 7,315
+cases with connected incomparability graph, the minimum balance was
+\(889/2483\). For two insertions into the 42 tail representatives,
+6,899,699 labelled cases gave 4,281,043 with connected incomparability
+graph, all of which were checked. Their minimum balance was
+\(269/767\). Two insertions into the 68 equality representatives gave
+3,563,408 labelled cases, of which 336,004 were connected and checked.
+Their minimum was \(63/160\). There were no counterexamples in the
+checked cases. The coverage is limited to insertions into these seeds.
+
+\paragraph{Acknowledgement.}
+The computation and exposition used AI assistance.
+
+\begin{thebibliography}{9}
+\bibitem{acpp} M. Aires, S. H. Chan, I. Pak, and G. Panova.
+Breaking the infinite barrier in the one-third--two-thirds conjecture.
+\href{https://arxiv.org/abs/2609.30888v2}{arXiv:2609.30888v2} (2026).
+\bibitem{gupta} A. Gupta. Balance constants, majority cycles, and the
+Gold Partition Conjecture through fourteen elements.
+\href{https://arxiv.org/abs/2607.23926v2}{arXiv:2607.23926v2} (2026).
+\end{thebibliography}
+\end{document}
